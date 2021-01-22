@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "03705094-00a1-4841-849e-bf062537ea81",
+		"name": "restful-stub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer-XML",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<customer>\r\n\t<customerId>C1</customerId>\r\n\t<firstName>John</firstName>\r\n\t<lastName>Snow</lastName>\r\n\t<age>26</age>\r\n\t<contactNo>7896587412</contactNo>\r\n\t<address>\r\n\t\t<street>AMS Road</street>\r\n\t\t<city>Mumbai</city>\r\n\t\t<state>Maharashtra</state>\r\n\t\t<postalCode>400001</postalCode>\r\n\t</address>\r\n</customer>"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:12000/customer-api/customers/xml",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "12000",
+					"path": [
+						"customer-api",
+						"customers",
+						"xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer-JSON",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerId\" : \"C1\",\r\n  \"firstName\" : \"John\",\r\n  \"lastName\" : \"Snow\",\r\n  \"age\" : 26,\r\n  \"contactNo\" : \"7896587412\",\r\n  \"address\" : {\r\n    \"street\" : \"AMS Road\",\r\n    \"city\" : \"Mumbai\",\r\n    \"state\" : \"Maharashtra\",\r\n    \"postalCode\" : 400001\r\n  }\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:12000/customer-api/customers/json",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "12000",
+					"path": [
+						"customer-api",
+						"customers",
+						"json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
